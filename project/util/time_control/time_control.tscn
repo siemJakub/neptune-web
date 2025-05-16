@@ -1,0 +1,52 @@
+[gd_scene load_steps=5 format=3 uid="uid://7xbv0g2jcs2c"]
+
+[ext_resource type="Script" uid="uid://ce5k0qebkhgce" path="res://util/time_control/time_control.gd" id="1_0ngqq"]
+[ext_resource type="Script" uid="uid://tf8t05ftlap" path="res://util/two_icon_button.gd" id="1_duv4u"]
+[ext_resource type="Texture2D" uid="uid://cfwog2iqwrc7g" path="res://icons/playback-pause.svg" id="2_0ngqq"]
+[ext_resource type="Texture2D" uid="uid://daq7iltasrk10" path="res://icons/playback-play.svg" id="3_6f8iv"]
+
+[node name="TimeControl" type="HBoxContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+script = ExtResource("1_0ngqq")
+
+[node name="Button" type="Button" parent="."]
+custom_minimum_size = Vector2(27, 0)
+layout_mode = 2
+toggle_mode = true
+button_pressed = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("1_duv4u")
+pressed_icon = ExtResource("2_0ngqq")
+normal_icon = ExtResource("3_6f8iv")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_right = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 11
+
+[node name="ScaleSlider" type="HSlider" parent="MarginContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+max_value = 1.0
+step = 0.01
+
+[node name="ScaleLabel" type="Label" parent="MarginContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "0.0x"
+
+[connection signal="toggled" from="Button" to="." method="_on_button_toggled"]
+[connection signal="value_changed" from="MarginContainer/HBoxContainer/ScaleSlider" to="." method="_on_scale_slider_value_changed"]

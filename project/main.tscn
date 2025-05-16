@@ -1,0 +1,563 @@
+[gd_scene load_steps=45 format=3 uid="uid://prladdb578pl"]
+
+[ext_resource type="Script" uid="uid://cim84s0vfefjy" path="res://main.gd" id="1_4c57u"]
+[ext_resource type="Script" path="res://util/time_manager.gd" id="1_5vw27"]
+[ext_resource type="PackedScene" uid="uid://b0nt4n13a6448" path="res://addons/starlight/Stars.tscn" id="2_h2yge"]
+[ext_resource type="PackedScene" uid="uid://5xssxeelxkgo" path="res://util/targeted_rotatable_camera_3d/targeted_rotatable_camera_3d.tscn" id="4_1bvp3"]
+[ext_resource type="Script" path="res://util/distanced_star_generator.gd" id="4_4c57u"]
+[ext_resource type="PackedScene" uid="uid://daoi7ht5h2nc2" path="res://body/neptune/neptune.glb" id="4_7mycd"]
+[ext_resource type="PackedScene" uid="uid://blr18b47ybb2a" path="res://body/triton/triton.glb" id="5_lquwl"]
+[ext_resource type="Shader" uid="uid://57lcolu6kso5" path="res://body/orbit.gdshader" id="6_7mycd"]
+[ext_resource type="Script" uid="uid://dni4taamws0q8" path="res://util/circular_rotator.gd" id="7_5vw27"]
+[ext_resource type="Resource" uid="uid://cmkknc0qu4hyh" path="res://body/neptune/neptune_info.tres" id="8_w48qg"]
+[ext_resource type="PackedScene" uid="uid://7xbv0g2jcs2c" path="res://util/time_control/time_control.tscn" id="9_kek77"]
+[ext_resource type="Material" uid="uid://sm0boyfq5yvh" path="res://body/naiad/naiad_material.tres" id="10_0rl1p"]
+[ext_resource type="Script" uid="uid://bxq06g8g45hgo" path="res://util/focus_point/focus_point.gd" id="10_dg77c"]
+[ext_resource type="Theme" uid="uid://p8dvl1ygm0ri" path="res://theme.tres" id="10_efxa6"]
+[ext_resource type="Resource" uid="uid://tm2mfpqfux15" path="res://body/naiad/naiad_info.tres" id="11_cegan"]
+[ext_resource type="ArrayMesh" uid="uid://cy7b2bweowd61" path="res://body/naiad/naiad.obj" id="11_ok6jj"]
+[ext_resource type="Material" uid="uid://dvtplt7btlrf7" path="res://body/despina/despina_material.tres" id="12_0odxb"]
+[ext_resource type="Resource" uid="uid://c2kkcm5h02ref" path="res://body/triton/triton_info.tres" id="12_cegan"]
+[ext_resource type="Resource" uid="uid://dstydqs625h6c" path="res://body/thalassa/thalassa_info.tres" id="13_074og"]
+[ext_resource type="Resource" uid="uid://c5awww3obl2ye" path="res://body/proteus/proteus_info.tres" id="13_82xsv"]
+[ext_resource type="Material" uid="uid://w86kaq8gc643" path="res://body/thalassa/thalassa_material.tres" id="13_facbu"]
+[ext_resource type="Resource" uid="uid://briw06essdgw4" path="res://body/despina/despina_info.tres" id="13_getpj"]
+[ext_resource type="ArrayMesh" uid="uid://bxc8bncwomc0y" path="res://body/despina/despina.obj" id="13_lswn8"]
+[ext_resource type="Script" uid="uid://cipsb003ppwfj" path="res://util/data_table.gd" id="13_ycdy4"]
+[ext_resource type="Texture2D" uid="uid://blslsk2mubdi4" path="res://icons/zoom-in.svg" id="14_2cqfq"]
+[ext_resource type="ArrayMesh" uid="uid://cbd24d8ih85l1" path="res://body/thalassa/thalassa.obj" id="14_b1qrp"]
+[ext_resource type="Resource" uid="uid://bcx1mrptknune" path="res://body/larissa/larissa_info.tres" id="15_d13ii"]
+[ext_resource type="Texture2D" uid="uid://mujn2gjuh5co" path="res://icons/zoom-out.svg" id="15_yaehf"]
+[ext_resource type="Resource" uid="uid://dt58r5iyrle64" path="res://body/galatea/galatea_info.tres" id="17_ryguw"]
+[ext_resource type="Material" uid="uid://3hbbm04happ1" path="res://body/galatea/galatea_material.tres" id="19_come4"]
+[ext_resource type="ArrayMesh" uid="uid://krbp24ueo42v" path="res://body/galatea/galatea.obj" id="20_h8e4i"]
+[ext_resource type="Material" uid="uid://degadusih2tvd" path="res://body/larissa/larissa_material.tres" id="22_4lmeg"]
+[ext_resource type="ArrayMesh" uid="uid://co3p375b0ddoi" path="res://body/larissa/larissa.obj" id="23_0cp0l"]
+[ext_resource type="Material" uid="uid://c5g3vr123fvf8" path="res://body/proteus/proteus_material.tres" id="25_d2t1y"]
+[ext_resource type="ArrayMesh" uid="uid://d1bjqxudbabr0" path="res://body/proteus/proteus.obj" id="26_gngh3"]
+
+[sub_resource type="Environment" id="Environment_1bvp3"]
+background_energy_multiplier = 0.0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_82xsv"]
+size = Vector2(96.449, 96.449)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4c57u"]
+render_priority = 0
+shader = ExtResource("6_7mycd")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_2cqfq"]
+size = Vector2(100.149, 100.149)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_ryguw"]
+size = Vector2(105.052, 105.052)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_d13ii"]
+size = Vector2(123.905, 123.905)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_1u8w0"]
+size = Vector2(147.097, 147.097)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_getpj"]
+size = Vector2(235.294, 235.294)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_kek77"]
+size = Vector2(708, 708)
+
+[node name="Node3D" type="Node3D"]
+script = ExtResource("1_4c57u")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_1bvp3")
+
+[node name="TimeManager" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("1_5vw27")
+
+[node name="Stars" parent="." instance=ExtResource("2_h2yge")]
+script = ExtResource("4_4c57u")
+min_distance = 1200.0
+size = 5000.0
+star_count = 10000
+rng_seed = 1234
+generate_at_origin = false
+
+[node name="DefaultFocusPoint" type="Node3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(0.960016, 0, 0.279946, 0, 1, 0, -0.279946, 0, 0.960016, 0, 0, 0)
+script = ExtResource("10_dg77c")
+view_distance = 550.0
+
+[node name="NeptuneFocusPoint" type="Node3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0, 0, 0)
+script = ExtResource("10_dg77c")
+view_distance = 100.0
+info = ExtResource("8_w48qg")
+
+[node name="NeptuneRotator" type="Node3D" parent="."]
+script = ExtResource("7_5vw27")
+period = 57996.0
+metadata/_custom_type_script = "uid://dni4taamws0q8"
+
+[node name="Neptune" parent="NeptuneRotator" instance=ExtResource("4_7mycd")]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0, 0, 0)
+
+[node name="NaiadOrbit" type="Node3D" parent="."]
+transform = Transform3D(0.996493, -0.0836778, 0, 0.0836778, 0.996493, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="NaiadOrbit"]
+mesh = SubResource("PlaneMesh_82xsv")
+skeleton = NodePath("../../TritonOrbit")
+surface_material_override/0 = SubResource("ShaderMaterial_4c57u")
+
+[node name="CircularRotator" type="Node3D" parent="NaiadOrbit"]
+script = ExtResource("7_5vw27")
+period = 25435.8
+metadata/_custom_type_script = "uid://dni4taamws0q8"
+
+[node name="Naiad" type="MeshInstance3D" parent="NaiadOrbit/CircularRotator"]
+transform = Transform3D(0.984196, -0.177085, 0, 0.177085, 0.984196, 0, 0, 0, 1, 48.225, 0, 0)
+material_override = ExtResource("10_0rl1p")
+mesh = ExtResource("11_ok6jj")
+
+[node name="NaiadFocusPoint" type="Node3D" parent="NaiadOrbit/CircularRotator"]
+unique_name_in_owner = true
+transform = Transform3D(1, -1.49012e-08, 0, 1.49012e-08, 1, 0, 0, 0, 1, 48.225, 0, 0)
+script = ExtResource("10_dg77c")
+view_distance = 0.5
+info = ExtResource("11_cegan")
+
+[node name="ThalassaOrbit" type="Node3D" parent="."]
+transform = Transform3D(0.93358, -0.358368, 0, 0.358368, 0.93358, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="ThalassaOrbit"]
+mesh = SubResource("PlaneMesh_2cqfq")
+skeleton = NodePath("../../TritonOrbit")
+surface_material_override/0 = SubResource("ShaderMaterial_4c57u")
+
+[node name="CircularRotator" type="Node3D" parent="ThalassaOrbit"]
+script = ExtResource("7_5vw27")
+period = 26912.0
+metadata/_custom_type_script = "uid://dni4taamws0q8"
+
+[node name="Thalassa" type="MeshInstance3D" parent="ThalassaOrbit/CircularRotator"]
+transform = Transform3D(0.933581, 0.358368, 0, -0.358368, 0.933581, 0, 0, 0, 1, 50.075, 0, 0)
+material_override = ExtResource("13_facbu")
+mesh = ExtResource("14_b1qrp")
+skeleton = NodePath("../..")
+
+[node name="ThalassaFocusPoint" type="Node3D" parent="ThalassaOrbit/CircularRotator"]
+unique_name_in_owner = true
+transform = Transform3D(1, -3.57628e-07, 0, 3.57628e-07, 1, 0, 0, 0, 1, 50.075, 0, 0)
+script = ExtResource("10_dg77c")
+view_distance = 0.5
+info = ExtResource("13_074og")
+
+[node name="DespinaOrbit" type="Node3D" parent="."]
+transform = Transform3D(0.999994, -0.00349065, 0, 0.00349065, 0.999994, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="DespinaOrbit"]
+mesh = SubResource("PlaneMesh_ryguw")
+skeleton = NodePath("../../TritonOrbit")
+surface_material_override/0 = SubResource("ShaderMaterial_4c57u")
+
+[node name="CircularRotator" type="Node3D" parent="DespinaOrbit"]
+script = ExtResource("7_5vw27")
+period = 28914.2
+metadata/_custom_type_script = "uid://dni4taamws0q8"
+
+[node name="Despina" type="MeshInstance3D" parent="DespinaOrbit/CircularRotator"]
+transform = Transform3D(0.999994, 0.00349065, 0, -0.00349065, 0.999994, 0, 0, 0, 1, 52.526, 0, 0)
+material_override = ExtResource("12_0odxb")
+mesh = ExtResource("13_lswn8")
+
+[node name="DespinaFocusPoint" type="Node3D" parent="DespinaOrbit/CircularRotator/Despina"]
+unique_name_in_owner = true
+transform = Transform3D(0.999994, -0.00349065, 0, 0.00349065, 0.999994, 0, 0, 0, 1, 0, 0, 0)
+script = ExtResource("10_dg77c")
+view_distance = 0.7
+info = ExtResource("13_getpj")
+metadata/_custom_type_script = "uid://bxq06g8g45hgo"
+
+[node name="GalateaOrbit" type="Node3D" parent="."]
+transform = Transform3D(0.999998, -0.00174533, 0, 0.00174533, 0.999998, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="GalateaOrbit"]
+mesh = SubResource("PlaneMesh_d13ii")
+skeleton = NodePath("../../TritonOrbit")
+surface_material_override/0 = SubResource("ShaderMaterial_4c57u")
+
+[node name="CircularRotator" type="Node3D" parent="GalateaOrbit"]
+script = ExtResource("7_5vw27")
+period = 37043.5
+metadata/_custom_type_script = "uid://dni4taamws0q8"
+
+[node name="Galatea" type="MeshInstance3D" parent="GalateaOrbit/CircularRotator"]
+transform = Transform3D(0.999999, 0.00174533, 0, -0.00174533, 0.999999, 0, 0, 0, 1, 61.953, 0, 0)
+material_override = ExtResource("19_come4")
+mesh = ExtResource("20_h8e4i")
+
+[node name="GalateaFocusPoint" type="Node3D" parent="GalateaOrbit/CircularRotator/Galatea"]
+unique_name_in_owner = true
+transform = Transform3D(0.999998, -0.00174533, 0, 0.00174533, 0.999998, 0, 0, 0, 1, 0, 0, 0)
+script = ExtResource("10_dg77c")
+view_distance = 1.0
+info = ExtResource("17_ryguw")
+metadata/_custom_type_script = "uid://bxq06g8g45hgo"
+
+[node name="LarissaOrbit" type="Node3D" parent="."]
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="LarissaOrbit"]
+mesh = SubResource("PlaneMesh_1u8w0")
+skeleton = NodePath("../../TritonOrbit")
+surface_material_override/0 = SubResource("ShaderMaterial_4c57u")
+
+[node name="CircularRotator" type="Node3D" parent="LarissaOrbit"]
+script = ExtResource("7_5vw27")
+period = 47922.0
+metadata/_custom_type_script = "uid://dni4taamws0q8"
+
+[node name="Larissa" type="MeshInstance3D" parent="LarissaOrbit/CircularRotator"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 73.548, 0, 0)
+material_override = ExtResource("22_4lmeg")
+mesh = ExtResource("23_0cp0l")
+
+[node name="LarissaFocusPoint" type="Node3D" parent="LarissaOrbit/CircularRotator/Larissa"]
+unique_name_in_owner = true
+script = ExtResource("10_dg77c")
+view_distance = 1.0
+info = ExtResource("15_d13ii")
+metadata/_custom_type_script = "uid://bxq06g8g45hgo"
+
+[node name="ProteusOrbit" type="Node3D" parent="."]
+transform = Transform3D(0.999962, -0.00872654, 0, 0.00872654, 0.999962, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="ProteusOrbit"]
+mesh = SubResource("PlaneMesh_getpj")
+skeleton = NodePath("../../TritonOrbit")
+surface_material_override/0 = SubResource("ShaderMaterial_4c57u")
+
+[node name="CircularRotator" type="Node3D" parent="ProteusOrbit"]
+script = ExtResource("7_5vw27")
+period = 96968.0
+metadata/_custom_type_script = "uid://dni4taamws0q8"
+
+[node name="Proteus" type="MeshInstance3D" parent="ProteusOrbit/CircularRotator"]
+transform = Transform3D(0.999962, 0.00872654, 0, -0.00872654, 0.999962, 0, 0, 0, 1, 117.647, -1.19209e-07, 0)
+material_override = ExtResource("25_d2t1y")
+mesh = ExtResource("26_gngh3")
+skeleton = NodePath("../..")
+
+[node name="ProteusFocusPoint" type="Node3D" parent="ProteusOrbit/CircularRotator/Proteus"]
+unique_name_in_owner = true
+transform = Transform3D(0.999962, -0.00872654, 0, 0.00872654, 0.999962, 0, 0, 0, 1, 0, 0, 0)
+script = ExtResource("10_dg77c")
+view_distance = 2.0
+info = ExtResource("13_82xsv")
+metadata/_custom_type_script = "uid://bxq06g8g45hgo"
+
+[node name="TritonOrbit" type="Node3D" parent="."]
+transform = Transform3D(0.920505, 0.390731, 0, -0.390731, 0.920505, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="TritonOrbit"]
+mesh = SubResource("PlaneMesh_kek77")
+surface_material_override/0 = SubResource("ShaderMaterial_4c57u")
+
+[node name="CircularRotator" type="Node3D" parent="TritonOrbit"]
+script = ExtResource("7_5vw27")
+period = -507760.0
+metadata/_custom_type_script = "uid://dni4taamws0q8"
+
+[node name="Triton" parent="TritonOrbit/CircularRotator" instance=ExtResource("5_lquwl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 354, 0, 0)
+
+[node name="TritonFocusPoint" type="Node3D" parent="TritonOrbit/CircularRotator/Triton"]
+unique_name_in_owner = true
+script = ExtResource("10_dg77c")
+view_distance = 10.0
+info = ExtResource("12_cegan")
+
+[node name="SunOrbit" type="Node3D" parent="."]
+script = ExtResource("7_5vw27")
+period = 5.20085e+09
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="SunOrbit"]
+
+[node name="Camera" parent="." instance=ExtResource("4_1bvp3")]
+unique_name_in_owner = true
+transform = Transform3D(0.920505, -0.0170434, 0.390359, 0, 0.999048, 0.0436194, -0.390731, -0.0401519, 0.919629, 0, 0, 0)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="MarginContainer2" type="MarginContainer" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("10_efxa6")
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="BottomControlContainer" type="HBoxContainer" parent="CanvasLayer/MarginContainer2"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_constants/separation = 20
+
+[node name="Panel" type="Panel" parent="CanvasLayer/MarginContainer2/BottomControlContainer"]
+custom_minimum_size = Vector2(300, 30)
+layout_mode = 2
+
+[node name="TimeControl" parent="CanvasLayer/MarginContainer2/BottomControlContainer/Panel" instance=ExtResource("9_kek77")]
+unique_name_in_owner = true
+layout_mode = 1
+time_scale = 3.0
+time_scale_min = 0.0
+time_scale_max = 5.0
+time_scale_step = 0.1
+time_scale_text_format = "1e%.1fx"
+
+[node name="ZoomButtonContainer" type="HBoxContainer" parent="CanvasLayer/MarginContainer2/BottomControlContainer"]
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="ZoomInButton" type="Button" parent="CanvasLayer/MarginContainer2/BottomControlContainer/ZoomButtonContainer"]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+icon = ExtResource("14_2cqfq")
+icon_alignment = 1
+
+[node name="ZoomOutButton" type="Button" parent="CanvasLayer/MarginContainer2/BottomControlContainer/ZoomButtonContainer"]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+icon = ExtResource("15_yaehf")
+icon_alignment = 1
+
+[node name="BodyInfoContainer" type="Control" parent="CanvasLayer/MarginContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_filter = 2
+
+[node name="NameLabel" type="Label" parent="CanvasLayer/MarginContainer2/BodyInfoContainer"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -51.0
+offset_right = 51.0
+offset_bottom = 39.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_type_variation = &"HeaderLarge"
+text = "Neptun"
+
+[node name="Panel" type="Panel" parent="CanvasLayer/MarginContainer2/BodyInfoContainer"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+grow_vertical = 2
+size_flags_horizontal = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/MarginContainer2/BodyInfoContainer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/MarginContainer2/BodyInfoContainer/Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="RichDescriptionLabel" type="RichTextLabel" parent="CanvasLayer/MarginContainer2/BodyInfoContainer/Panel/VBoxContainer/MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+bbcode_enabled = true
+text = "[center]
+[img width=100%]media/neptune_voyager_2.jpg[/img]
+[i][color=gray]Zdjęcie Neptuna zrobione przez Voyagera 2[/color][/i]
+[/center]
+
+Oto Neptun, ósma i zarazem najdalsza od słońca planeta Układu Słonecznego.
+
+Neptun składa się głównie z gazów i cieczy.
+
+Neptun nie jest widoczny z Ziemi gołym okiem i jest  jest jedyną planetą Układu Słonecznego, której istnienie wykazano nie na podstawie obserwacji nieba, ale na drodze obliczeń matematycznych."
+
+[node name="BackButton" type="Button" parent="CanvasLayer/MarginContainer2/BodyInfoContainer/Panel/VBoxContainer"]
+layout_mode = 2
+text = "Powrót"
+
+[node name="Panel2" type="Panel" parent="CanvasLayer/MarginContainer2/BodyInfoContainer"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 0
+grow_vertical = 2
+size_flags_horizontal = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/MarginContainer2/BodyInfoContainer/Panel2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/MarginContainer2/BodyInfoContainer/Panel2/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/MarginContainer2/BodyInfoContainer/Panel2/VBoxContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/MarginContainer2/BodyInfoContainer/Panel2/VBoxContainer/ScrollContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="DataContainer" type="GridContainer" parent="CanvasLayer/MarginContainer2/BodyInfoContainer/Panel2/VBoxContainer/ScrollContainer/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/v_separation = 20
+columns = 2
+script = ExtResource("13_ycdy4")
+
+[node name="Label" type="Label" parent="CanvasLayer/MarginContainer2/BodyInfoContainer/Panel2/VBoxContainer/ScrollContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 0.431373)
+text = "Wartości podane w nawiasach to proporcja podanej wartości do odpowiedniej wartości dla Ziemi"
+autowrap_mode = 3
+
+[node name="BodySelectPanel" type="ScrollContainer" parent="CanvasLayer/MarginContainer2"]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(125, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/MarginContainer2/BodySelectPanel"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 12
+alignment = 1
+
+[node name="NeptuneButton" type="Button" parent="CanvasLayer/MarginContainer2/BodySelectPanel/VBoxContainer"]
+layout_mode = 2
+text = "Neptun"
+
+[node name="HSeparator2" type="HSeparator" parent="CanvasLayer/MarginContainer2/BodySelectPanel/VBoxContainer"]
+layout_mode = 2
+
+[node name="NaiadButton" type="Button" parent="CanvasLayer/MarginContainer2/BodySelectPanel/VBoxContainer"]
+layout_mode = 2
+text = "Najada"
+
+[node name="ThalassaButton" type="Button" parent="CanvasLayer/MarginContainer2/BodySelectPanel/VBoxContainer"]
+layout_mode = 2
+text = "Talassa"
+
+[node name="DespinaButton" type="Button" parent="CanvasLayer/MarginContainer2/BodySelectPanel/VBoxContainer"]
+layout_mode = 2
+text = "Despoina"
+
+[node name="GalateaButton" type="Button" parent="CanvasLayer/MarginContainer2/BodySelectPanel/VBoxContainer"]
+layout_mode = 2
+text = "Galatea"
+
+[node name="LarissaButton" type="Button" parent="CanvasLayer/MarginContainer2/BodySelectPanel/VBoxContainer"]
+layout_mode = 2
+text = "Larissa"
+
+[node name="HippocampButton" type="Button" parent="CanvasLayer/MarginContainer2/BodySelectPanel/VBoxContainer"]
+visible = false
+layout_mode = 2
+text = "Hippocamp"
+
+[node name="ProteusButton" type="Button" parent="CanvasLayer/MarginContainer2/BodySelectPanel/VBoxContainer"]
+layout_mode = 2
+text = "Proteusz"
+
+[node name="HSeparator" type="HSeparator" parent="CanvasLayer/MarginContainer2/BodySelectPanel/VBoxContainer"]
+layout_mode = 2
+
+[node name="TritonButton" type="Button" parent="CanvasLayer/MarginContainer2/BodySelectPanel/VBoxContainer"]
+layout_mode = 2
+text = "Tryton"
+
+[node name="NereidButton" type="Button" parent="CanvasLayer/MarginContainer2/BodySelectPanel/VBoxContainer"]
+visible = false
+layout_mode = 2
+text = "Nereid"
+
+[node name="HalimedeButton" type="Button" parent="CanvasLayer/MarginContainer2/BodySelectPanel/VBoxContainer"]
+visible = false
+layout_mode = 2
+text = "Halimede"
+
+[node name="SaoButton" type="Button" parent="CanvasLayer/MarginContainer2/BodySelectPanel/VBoxContainer"]
+visible = false
+layout_mode = 2
+text = "Sao"
+
+[node name="S2002Button" type="Button" parent="CanvasLayer/MarginContainer2/BodySelectPanel/VBoxContainer"]
+visible = false
+layout_mode = 2
+text = " S/2002 N 5"
+
+[node name="LaomedeiaButton" type="Button" parent="CanvasLayer/MarginContainer2/BodySelectPanel/VBoxContainer"]
+visible = false
+layout_mode = 2
+text = "Laomedeia"
+
+[node name="PsamatheButton" type="Button" parent="CanvasLayer/MarginContainer2/BodySelectPanel/VBoxContainer"]
+visible = false
+layout_mode = 2
+text = "Psamathe"
+
+[node name="NesoButton" type="Button" parent="CanvasLayer/MarginContainer2/BodySelectPanel/VBoxContainer"]
+visible = false
+layout_mode = 2
+text = "Neso"
+
+[node name="S2021Button" type="Button" parent="CanvasLayer/MarginContainer2/BodySelectPanel/VBoxContainer"]
+visible = false
+layout_mode = 2
+text = "S/2021 N 1"
+
+[connection signal="changed" from="CanvasLayer/MarginContainer2/BottomControlContainer/Panel/TimeControl" to="." method="_on_time_control_changed"]
+[connection signal="pressed" from="CanvasLayer/MarginContainer2/BottomControlContainer/ZoomButtonContainer/ZoomInButton" to="." method="_on_zoom_in_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/MarginContainer2/BottomControlContainer/ZoomButtonContainer/ZoomOutButton" to="." method="_on_zoom_out_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/MarginContainer2/BodyInfoContainer/Panel/VBoxContainer/BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/MarginContainer2/BodySelectPanel/VBoxContainer/NeptuneButton" to="." method="_on_neptune_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/MarginContainer2/BodySelectPanel/VBoxContainer/NaiadButton" to="." method="_on_naiad_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/MarginContainer2/BodySelectPanel/VBoxContainer/ThalassaButton" to="." method="_on_thalassa_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/MarginContainer2/BodySelectPanel/VBoxContainer/DespinaButton" to="." method="_on_despina_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/MarginContainer2/BodySelectPanel/VBoxContainer/GalateaButton" to="." method="_on_galatea_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/MarginContainer2/BodySelectPanel/VBoxContainer/LarissaButton" to="." method="_on_larissa_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/MarginContainer2/BodySelectPanel/VBoxContainer/ProteusButton" to="." method="_on_proteus_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/MarginContainer2/BodySelectPanel/VBoxContainer/TritonButton" to="." method="_on_triton_button_pressed"]

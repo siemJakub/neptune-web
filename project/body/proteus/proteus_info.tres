@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="FocusPointInfo" load_steps=2 format=3 uid="uid://c5awww3obl2ye"]
+
+[ext_resource type="Script" uid="uid://bspfic5yk2xu1" path="res://util/focus_point/focus_point_info.gd" id="1_u5sfv"]
+
+[resource]
+script = ExtResource("1_u5sfv")
+name = "Proteusz"
+description = "[center]
+[img width=100%]media/proteus_voyager_2.jpg[/img]
+[i][color=gray]Zdjęcie Proteusza wykonane przez Voyager'a 2[/color][/i]
+[/center]
+
+Proteusz to drugi największy księżyc Neptuna. Został odkryty na podstawie zdjęć wykonanych przez Voyagera 2.
+
+Proteusz nie został dokładnie zmapowany. Widoczny obok model księżyca jest jedynie przybliżeniem tego, jak faktyczny satelita może wyglądać.
+
+[b][u]Etymologia nazwy[/u][/b]
+Nazwa satelity pochodzi od mitologicznego bożka morskiego, który potrafił dowolnie zmieniać swój wygląd."
+data = Dictionary[String, String]({
+"Masa": "[1.55–3.10] × 10^19 kg",
+"Półoś wielka": "117 647 km",
+"Średni promień": "210 km"
+})
+metadata/_custom_type_script = "uid://bspfic5yk2xu1"

@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="FocusPointInfo" load_steps=2 format=3 uid="uid://briw06essdgw4"]
+
+[ext_resource type="Script" uid="uid://bspfic5yk2xu1" path="res://util/focus_point/focus_point_info.gd" id="1_xxnui"]
+
+[resource]
+script = ExtResource("1_xxnui")
+name = "Despoina"
+description = "[center]
+[img width=100%]media/despina_voyager_2.jpg[/img]
+[i][color=gray]Zdjęcie Despoiny wykonane przez Voyager'a 2[/color][/i]
+[/center]
+
+Despoina to trzeci w kolejności od planety satelita Neptuna.
+
+Orbita Despoiny znajduje się wewnątrz granicy Roche'a Neptuna, przez co siły pływowe działające na ten księżyc spowodują, że pewnego dnia może on zostać rozerwany, a jego pozostałości zasilą pierścień planety.
+
+Despoina stale zbiża się do Neptuna i może pewnego dnia zderzyć się z jego atmosferą.
+
+[b][u]Etymologia nazwy[/u][/b]
+Nazwa satelity pochodzi od Despoiny, starożytnej bogini arkadyjskiej, córki Posejdona i Demeter."
+data = Dictionary[String, String]({
+"Masa": "~[0.71–1.4] × 10^18 kg",
+"Półoś wielka": "52 525.95 km",
+"Średni promień": "75 km"
+})
+metadata/_custom_type_script = "uid://bspfic5yk2xu1"

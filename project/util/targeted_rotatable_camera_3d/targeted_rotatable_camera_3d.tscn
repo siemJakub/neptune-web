@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://5xssxeelxkgo"]
+
+[ext_resource type="Script" uid="uid://da403x1rorxju" path="res://util/targeted_rotatable_camera_3d/targeted_rotatable_camera_3d.gd" id="1_ns726"]
+
+[node name="TargetedRotatableCamera3D" type="Node3D"]
+script = ExtResource("1_ns726")
+
+[node name="CameraOrigin" type="Node3D" parent="."]
+unique_name_in_owner = true
+
+[node name="Camera3D" type="Camera3D" parent="CameraOrigin"]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 74.865)
+current = true

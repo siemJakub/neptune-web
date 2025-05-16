@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="FocusPointInfo" load_steps=2 format=3 uid="uid://tm2mfpqfux15"]
+
+[ext_resource type="Script" uid="uid://bspfic5yk2xu1" path="res://util/focus_point/focus_point_info.gd" id="1_yugny"]
+
+[resource]
+script = ExtResource("1_yugny")
+name = "Najada"
+description = "[center]
+[img width=100%]media/naiad_voyager_2.jpg[/img]
+[i][color=gray]Zdjęcie Najady wykonane przez Voyager'a 2[/color][/i]
+[/center]
+
+Najada to najbliższy Neptunowi satelita. Jest nieregularnie ukształtowana. Była ostatnim z księżyców Neptuna odkrytych przez Voyager'a 2. 
+
+Orbita Najady znajduje się wewnątrz granicy Roche’a Neptuna, przez co siły pływowe działające na ten księżyc spowodują, że pewnego dnia rozpadnie się on, a jego pozostałości zasilą pierścień planety.
+
+Brak jest dokładniejszych zdjęć satelity. Widoczny obok model jest jedynie przybliżeniem tego, jak faktyczny satelita może wyglądać.
+
+[b][u]Etymologia nazwy[/u][/b]
+Nazwa satelity pochodzi od najad - nimf wód lądowych - z mitologii greckiej."
+data = Dictionary[String, String]({
+"Masa": "~1.2 × 10^17 kg",
+"Półoś wielka": "48 224.41 km",
+"Średni promień": "33 km"
+})
+metadata/_custom_type_script = "uid://bspfic5yk2xu1"

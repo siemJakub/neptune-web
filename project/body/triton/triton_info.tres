@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="FocusPointInfo" load_steps=2 format=3 uid="uid://c2kkcm5h02ref"]
+
+[ext_resource type="Script" uid="uid://bspfic5yk2xu1" path="res://util/focus_point/focus_point_info.gd" id="1_a3p22"]
+
+[resource]
+script = ExtResource("1_a3p22")
+name = "Tryton"
+description = "[center]
+[img width=100%]media/triton_voyager_2.jpg[/img]
+[i][color=gray]Zdjęcie Trytona wykonane przez Voyager'a 2[/color][/i]
+[/center]
+
+Tryton to największy księżyc Neptuna. Jest jedynym dużym księżycem w Układzie Słonecznym, który porusza się ruchem wstecznym wokół swojej planety.
+
+Tryton powoli zbliża się do Neptuna i przypuszczalnie za 1.4 - 3.6 mld lat zderzy się z planetą. Może to skutkować rozpadnięciem się go na niewielkie fragmenty i stworzeniem systemu pierścieni o wielkości podobnej do pierścieni Saturna.
+
+Tryton jest aktywny geologicznie. Voyager 2 zaobserwował na nimi erupcje kriowulkaniczne, wyrzucające płynny azot, pył i metan 8 km ponad powierzchnię.
+
+Widoczny obok model Trytona został wykonany przez NASA, za pomocą zdjęć wykonanych przez Voyagera 2.
+
+[b][u]Etymologia nazwy[/u][/b]
+Nazwa satelity pochodzi z mitologi greckiej od Trytona - syna Posejdona."
+data = Dictionary[String, String]({
+"Masa": "2.1389 × 10^22",
+"Półoś wielka": "354 759 km",
+"Średni promień": "1 353.4 km"
+})
+metadata/_custom_type_script = "uid://bspfic5yk2xu1"

@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="FocusPointInfo" load_steps=2 format=3 uid="uid://bcx1mrptknune"]
+
+[ext_resource type="Script" uid="uid://bspfic5yk2xu1" path="res://util/focus_point/focus_point_info.gd" id="1_2rgo0"]
+
+[resource]
+script = ExtResource("1_2rgo0")
+name = "Larissa"
+description = "[center]
+[img width=100%]media/larissa_voyager_2.jpg[/img]
+[i][color=gray]Zdjęcie Larissy wykonane przez sondę Voyager 2[/color][/i]
+[/center]
+
+Larissa to piąty najbliższy i piąty największy księżyc Neptuna. Odkryty został przez Harolda Reitsemę i jego zespół w maju 1981 roku; na 8 lat przed przelotem sondy Voyager 2.
+
+Larissa ma nieregularny kształt z mnóstwem kraterów.
+
+Orbita Larissy znajduje się wewnątrz granicy Roche’a Neptuna, przez co siły pływowe działające na ten księżyc spowodują, że pewnego dnia zostanie on rozerwany, a jego pozostałości zasilą pierścienie planety. 
+
+Larissa to również nazwa planetoidy. Istnieje również paronimiczna planetoida - Clarissa.
+
+W przeciwieństwie do większości wewnętrznych księżyców Neptuna, został dość dokładnie sfotografowany. Pomimo tego widoczny obok model księżyca jest jedynie przybliżeniem tego, jak faktyczny satelita dokładnie wygląda.
+
+[b][u]Etymologia nazwy[/u][/b]
+Nazwa satelity pochodzi od nimfy Larissy - kochanki Posejdona z mitologii greckiej."
+data = Dictionary[String, String]({
+"Masa": "~[0.19–5.7] × 10^18 kg",
+"Półoś wielka": "73 548.26 km",
+"Średni promień": "97 km"
+})
+metadata/_custom_type_script = "uid://bspfic5yk2xu1"

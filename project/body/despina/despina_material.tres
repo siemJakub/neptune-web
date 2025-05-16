@@ -1,0 +1,6 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dvtplt7btlrf7"]
+
+[ext_resource type="Texture2D" uid="uid://bkqqrut38b101" path="res://body/despina/despina_color.png" id="1_mxvxi"]
+
+[resource]
+albedo_texture = ExtResource("1_mxvxi")
